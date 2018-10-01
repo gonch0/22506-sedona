@@ -3,7 +3,7 @@
 * Студент: [Иван Гончаров](https://up.htmlacademy.ru/adaptive/15/user/22506).
 * Наставник: [Владислав Балабанович](https://htmlacademy.ru/profile/balabanovich).
 
----
+----
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
 
