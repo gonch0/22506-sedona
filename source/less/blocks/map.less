@@ -1,19 +1,20 @@
-
 .map {
-  background: url("img/bg-map-mobile@1x.jpg");
-  width: 320px;
-  height: 350px;
+  min-height: 350px;
+  background-image: url("../img/bg-map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-
-
-/*
-.hotels__title {
-  background-color: gray;
+@media (min-width: 768px) {
+  .map {
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+  }
 }
 
-
-.hotels__search {
-  background-color: gray;
+@media (min-width: 1200px){
+  .map {
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+  }
 }
-*/
+

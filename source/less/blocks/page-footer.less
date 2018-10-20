@@ -1,24 +1,63 @@
-
-
 .page-footer {
-  padding-top: 30px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 235px;
+  text-align: center;
 }
 
-.page-footer__title b{
+.page-footer__title {
+  padding-top: 26px;
+  padding-bottom: 32px;
+}
 
+.page-footer__title b {
   font-size: 21px;
   line-height: 26px;
   font-weight: 800;
 }
-.page-footer__copyright b{
+
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-footer__copyright b {
+  margin-right: 11px;
+  text-transform: uppercase;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
 }
-/*
+
+
+
+/* SVG?
 .page-footer__copyright img{
   background: url("img/logo-htmlacademy.svg");
   width: 320px;
   height: 350px;
 }
 */
+
+
+@media (min-width: 768px) {
+ .page-footer {
+    min-height: 120px;
+  }
+
+.page-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-footer {
+    min-height: 120px;
+  }
+
+}
