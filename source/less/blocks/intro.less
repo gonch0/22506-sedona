@@ -1,7 +1,26 @@
-
 .intro {
-   background: url("img/bg-back-mobile@1x.jpg");
-
-   width: 320px;
+  position: relative;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+
+@media (min-width: 768px) {
+  .intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/bg-back-tablet@1x.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    padding-top: 0px;
+    min-height: 518px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro {
+    background-image: url(../img/bg-back-desktop@1x.jpg);
+  }
+}

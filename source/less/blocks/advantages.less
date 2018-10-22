@@ -1,54 +1,58 @@
 
-.advantages {
-   width: 320px;
+
+
+/*Этаж 1*/
+
+.advantages-banner {
+  margin: 0;
 }
 
-
-
-.advantages__header {
-  font-size: 13px;
-  height: 220px;
-  background-color: white;
-  background-position: bottom;
-  padding-top: 50px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-bottom: 0;
-}
 
 .advantages-banner__text {
-  padding-top: 20px;
-  padding-bottom: 20px;
   color: white;
   background-color: #81b3d2;
+  padding-bottom: 40px;
 }
 
 .advantages-banner__text h3 {
-  font-size: 13px;
-  font-weight: bold;
-}
-.advantages-banner__text p {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  margin: 0;
 }
 
-.advantages-banner {
+
+/*
+.advantages-banner__img {
+  display: block;
+
+}*/
+
+.advantages-banner img {
+  padding-top: 0px;
   padding-bottom: 0;
 }
 
 
+/*Этаж 2*/
 .advantages-list {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  text-align: left;
+  padding-right: 40px;
+  padding-left: 70px;
+  padding-top: 35px;
+  padding-bottom: 5px;
 }
 
 .advantages-list__item {
-  text-align: left;
-  padding-left: 70px;
-  padding-right: 40px;
-
+  padding-bottom: 15px;
 }
 
+.advantages-list__item h2 {
+  text-align: left;
+  margin: 0;
+}
+
+
+/*Этаж 3*/
 
 .advantages-text {
   background-color: #eeeeee;
@@ -66,29 +70,111 @@
 }
 
 
+@media (min-width: 768px) {
+
+/*Этаж 1*/
+
+  .advantages-banner {
+    display: flex;
+    justify-content: center;
+    max-height: 256px;
+    /*background-image: url("../img/main-city-tablet@1x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    padding-top: 0px; */
+  }
+  .advantages-banner__text {
+    width: 256px;
+  }
 
 
-/*
-.advantages-text {
+/*Этаж 2*/
+  .advantages-list {
+    display: flex;
+    justify-content: space-between;
+    min-height: 165px;
+    padding-right: 48px;
+    padding-left: 48px;
+    padding-top: 160px;
+    padding-bottom: 5px;
+  }
 
+  .advantages-list__item {
+    text-align: center;
+    width: 160px;
+  }
+
+  .advantages-list__item h2 {
+    text-align: center;
+  }
+
+  .advantages-list__item p {
+    margin: 0;
+    padding-top: 20px;
+  }
+
+/*Этаж 3*/
+  .advantages-banner--bridge {
+    flex-direction: row-reverse;
+  }
+
+/*Этаж 4*/
+
+  .advantages-text {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .advantages-text__item {
+    padding-bottom: 0;
+    width: 160px;
+    min-height: 256px;
+
+  }
+  .advantages-text__item h3 {
+    margin: 0;
+    padding-top: 46px;
+    padding-bottom: 9px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+  }
+
+  .advantages-text__item p {
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
 }
-*/
+
+@media (min-width: 1200px) {
+
+/*Этаж 1*/
+
+  .advantages-banner__text {
+    width: 400px;
+  }
+
+  .advantages-banner__img {
+    overflow: hidden;
+    height: 256px;
+    width: 800px;
+  }
 
 
+/*Этаж 2*/
+  .advantages-list__item {
+    width: 260px;
+  }
 
-
-/*
+/*Этаж 4*/
+  .advantages-text__item {
+    width: 286px;
+  }
 }
 
-.advantages-banner {
 
-}
-
-.advantages-banner__img {
-
-}
-
-*/
 
 
 

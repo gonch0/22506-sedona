@@ -1,10 +1,7 @@
 .name {
   border-top: 1px solid #e5e5e5;
-}
-
-.name__title {
-  font-size: 18px;
-  line-height: 26px;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
 }
 
 .name__field {
@@ -28,4 +25,44 @@
 .name__input::placeholder {
   font-weight: 700;
   color: black;
+}
+
+@media (min-width: 768px) {
+  .name {
+    border-top: none;
+    border-bottom: none;
+    margin-left: 0;
+  }
+
+  .name__title {
+    margin: 0;
+    padding-bottom: 55px;
+    text-align: left;
+  }
+
+  .name__field {
+    width: 268px;
+    margin-left: 0;
+    margin-bottom: 21px;
+  }
+
+  .name__label {
+    padding-right: 8px;
+  }
+
+  .name__input {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .name__title {
+    padding-left: 2px;
+  }
+
+  .name__field {
+    padding-left: 2px;
+  }
 }
