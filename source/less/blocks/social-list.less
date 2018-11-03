@@ -1,23 +1,31 @@
 
 .social-list {
   display: flex;
-  width: 156px;
-  height: 48px;
+  justify-content: center;
   list-style: none;
-  margin-top: 38px;
-  margin: 0 auto;
   margin-bottom: 40px;
+  margin-left: -42px;
 }
 
-.social__link{
+
+.social-list__item {
+  display: block;
+  padding-left: 14px;
+  padding-right: 4px;
+}
+
+.social-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 46px;
   height: 48px;
-  margin-right: 6px;
-  font-size: 0px;
+
+  margin-left: -12px;
   vertical-align: middle;
   background-color: #81b3d2;
-  fill: #ffffff;
+}
+
+.social-list__link img {
+  filter: invert(100%);
 }

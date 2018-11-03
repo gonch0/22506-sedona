@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
 
 body {
   min-width: 320px;
@@ -10,8 +24,9 @@ body {
   line-height: 24px;
   text-transform: uppercase;
   color: #000000;
-  background-color:#ffffff;
+
 }
+
 
 img {
   max-width: 100%;
@@ -22,17 +37,27 @@ a {
   text-decoration: none;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
-
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
-  body {
+  .container {
     width: 768px;
   }
 }
@@ -41,7 +66,7 @@ a {
 
 
 @media (min-width: 1200px) {
-  body {
+  .container {
     width: 1200px;
   }
 }

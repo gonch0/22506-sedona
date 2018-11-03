@@ -1,26 +1,56 @@
 .intro {
-  position: relative;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  min-height: 389px;
+  background-color: #ffffff;
+  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile@1x.jpg");
+  background-size: 104%, 91%, cover;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position-x: center, center, center;
+  background-position-y: bottom, center, center;
+}
+
+.intro--cut {
+  min-height: 158px;
+  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/text-sedona.svg"), url("../img/bg-back-mobile@1x.jpg");
+  background-size: 105%, 280px, 100%;
+  background-position-y: bottom, center, center;
 }
 
 
 @media (min-width: 768px) {
   .intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../img/bg-back-tablet@1x.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    padding-top: 0px;
-    min-height: 518px;
+    min-height: 520px;
+    background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-tablet@1x.jpg");
+    background-size: 102%, 60%, 100%;
+    background-position-x: center, 156px, center;
+    background-position-y: bottom, 79px, center;
   }
+
+  .intro--cut {
+    min-height: 292px;
+    background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/text-sedona.svg"), url("../img/bg-back-mobile@1x.jpg");
+    background-size: 104%, 280px, 100%;
+    background-position-x: center, center, center;
+    background-position-y: bottom, center, center;
+  }
+
+
 }
 
 @media (min-width: 1200px) {
   .intro {
-    background-image: url(../img/bg-back-desktop@1x.jpg);
+    min-height: 520px;
+    background-color: #ffffff;
+    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-desktop@1x.jpg");
+    background-size: 100%, 36%, 100%;
+    background-position-x: center, 370px, center;
+    background-position-y: bottom, 80px, center;
+  }
+
+  .intro--cut {
+    min-height: 301px;
+    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/text-sedona.svg"), url("../img/bg-back-desktop@1x.jpg");
+    background-size: 100%, 280px, 100%;
+    background-position-x: center, center, center;
+    background-position-y: bottom, center, center;
   }
 }
