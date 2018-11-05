@@ -2,7 +2,6 @@
   display: none;
 }
 
-
 .review__header h2 {
   margin: 0;
   padding-top: 37px;
@@ -22,16 +21,6 @@
   text-align: center;
 }
 
-
-.review__section {
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  border-top: #e5e5e5 solid 1px;
-
-}
-
 .review__title {
   margin-bottom: 20px;
   font-size: 18px;
@@ -39,30 +28,63 @@
 }
 
 
+.review__section {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 6px;
+  border-top: #e5e5e5 solid 1px;
+
+  &--name h3 {
+    margin-top: 15px;
+    margin-bottom: 22px;
+  }
+
+  &--contacts h3 {
+    margin-top: 15px;
+    margin-bottom: 21px;
+  }
+
+  &--feeling {
+    padding-bottom: 15px;
+  }
+
+  &--feeling h3 {
+    margin-bottom: 20px;
+  }
+
+  &--attractions h3 {
+    margin-bottom: 16px;
+  }
+
+  &--required {
+    border: none;
+    margin-bottom: 41px;
+  }
+
+}
+
 .review__field {
   display: flex;
   align-items: center;
   position: relative;
   margin-bottom: 20px;
 
-
   &--phone {
     flex-direction: column;
+    margin-bottom: 12px;
   }
 
   &--email {
     flex-direction: column;
   }
 
-
   &--radio {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 
   &--checkbox {
-    margin-bottom: 25px;
+    margin-bottom: 21px;
   }
-
 }
 
 
@@ -92,7 +114,6 @@
 }
 
 .review__input {
-
   padding: 0px 7px;
   padding-left: 20px;
   min-width: 150px;
@@ -118,6 +139,7 @@
 
 .review__input::placeholder {
   color: #000000;
+  font-size: 16px;
 }
 
 
@@ -129,16 +151,15 @@
   &--phone {
     padding-left: 20px;
     padding-right: 96px;
-    padding-bottom: 15px;
+    padding-bottom: 8px;
   }
 
   &--email {
     padding-left: 20px;
     padding-right: 110px;
-    padding-bottom: 15px;
+    padding-bottom: 8px;
   }
 }
-
 
 
 .review__label--radio,
@@ -214,24 +235,20 @@
 
 
 .review__textarea {
-  padding-top: 16px;
-
-  margin-right: 0px;
-  min-height: 160px;
-  width: 274px;
+  margin: 0;
+  padding: 16px 20px;
+  min-height: 128px;
+  width: 240px;
   text-align: left;
-
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
-
-
   background-color: #f2f2f2;
   border: none;
+  margin-bottom: 38px;
 
   &::placeholder {
-    padding-left: 20px;
-    color: #000000;
+    color: black;
   }
 }
 
@@ -239,8 +256,9 @@
   margin-top: 12px;
   width: 267px;
   height: 56px;
+  font-size: 21px;
+  line-height: 26px;
 }
-
 
 .review__modal {
   display: none;
@@ -337,11 +355,11 @@
     font-size: 30px;
     padding: 0;
     margin-top: 75px;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
   }
 
   .review__header p {
-    margin-bottom: 78px;
+    margin-bottom: 52px;
     padding: 0 104px;
   }
 
@@ -353,29 +371,32 @@
 
     &--feeling {
       order: 0;
-      width: 58%;
+      width: 58.8%;
     }
 
     &--name {
       order: 1;
-      width: 42%;
+      width: 41.2%;
+      margin-top: 5px;
     }
 
     &--contacts {
       order: 2;
       width: 100%;
+      margin-top: 32px;
     }
 
     &--attractions {
       order: 3;
       width: 100%;
-
+      margin-top: 6px;
     }
 
     &--emotions {
       order: 4;
       width: 100%;
-      margin-bottom: 30px;
+      margin-top: 17px;
+      margin-bottom: 45px;
     }
 
     &--required {
@@ -388,7 +409,7 @@
   .review__section--feeling::after {
     position: absolute;
     content: "";
-    top: 12px;
+    top: 25px;
     right: 56px;
     width: 1px;
     height: 292px;
@@ -431,25 +452,25 @@
 
     &--feeling h3 {
       text-align: left;
-      margin-bottom: 45px;
+      margin-bottom: 55px;
     }
 
     &--name h3 {
       text-align: left;
-      margin-bottom: 45px;
+      margin-bottom: 60px;
     }
 
     &--contacts h3 {
-      margin-bottom: 20px;
+      margin-bottom: 26px;
     }
 
     &--attractions h3 {
-      margin-bottom: 45px;
+      margin-bottom: 40px;
 
     }
 
     &--emotions h3 {
-      margin-bottom: 45px;
+      margin-bottom: 55px;
     }
   }
 
@@ -462,10 +483,11 @@
 
   .review__section--name .review__input {
     padding: 0;
-
-    &::placeholder {
+    padding-left: 20px;
+   /* &::placeholder {
+      color: red;
       padding-left: 20px;
-    }
+    }*/
   }
 
   .review__field--name  {
@@ -475,17 +497,17 @@
   .review__wrapper-checkbox {
     display: flex;
     flex-wrap: wrap;
-    align-content: space-between;
-    width: 470px;
-    margin-left: 93px;
-
+    justify-content: space-between;
+    margin-left: 95px;
+    width: 520px;
   }
+
+
 
   .review__field {
     padding: 0;
-
     &--phone {
-      margin-bottom: 25px;
+      margin-bottom: 21px;
     }
 
     &--email {
@@ -494,7 +516,7 @@
 
     &--checkbox {
       width: 50%;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
     }
 
     &--radio {
@@ -503,28 +525,31 @@
   }
 
   .review__textarea {
-    width: 100%;
+    width: 608px;
     margin-left: 0;
     margin-bottom: 20px;
 
+    padding-left: 20px;
 
-    &::placeholder {
+   /* &::placeholder {
       padding-left: 20px;
-    }
+    }*/
+
   }
 
 
   .review__section--required {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 90px;
-  }
+    margin-bottom: 80px;
 
- .review__button {
+    & .review__button {
     width: 50%;
-    padding: 0 5px;
+    padding: 0px;
+    height: 54px;
+    font-size: 19px;
+    }
   }
-
   .review__section--required p {
     display: block;
     width: 50%;
@@ -532,7 +557,6 @@
     line-height: 26px;
     text-align: right;
   }
-
 
   .review__modal {
     left: 50%;
@@ -603,60 +627,64 @@
     margin-top: 0;
   }
 
+  .review__header h2 {
+    margin-bottom: 30px;
+  }
+
   .review__header p {
     max-width: 445px;
-    margin-bottom: 60px;
+    margin-bottom: 37px;
   }
 
 
   .review__section {
+
+    &--name {
+      margin-left: -5px;
+    }
 
     &--required {
       padding-bottom: 67px;
     }
 
     &--contacts {
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       padding-top: 27px;
 
     }
 
     &--attractions {
-      padding-top: 17px;
+      padding-top: 0px;
+      margin-top: 0;
+      margin-bottom: 30px;
     }
 
   }
 
 
   .review__section {
-
     &--feeling h3 {
       padding-left: 80px;
+      margin-bottom: 58px;
     }
 
     &--name h3 {
       text-align: left;
-      margin-bottom: 45px;
+      margin-bottom: 60px;
     }
 
     &--contacts h3 {
+      margin-top: 0px;
       margin-bottom: 75px;
     }
 
   }
 
-
   .review__section--contacts {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 0;
+    margin-top: 18px;
   }
-
-  .review__section--contacts h3 {
-    width: 100%;
-    margin-bottom: 65px;
-  }
-
 
   .review__section--contacts .review__field {
     display: flex;
@@ -684,16 +712,41 @@
 
   .review__input--phone,
   .review__input--email {
-    min-width: 255px;
+    min-width: 205px;
   }
 
   .review__wrapper-checkbox {
     margin: 0;
-    justify-content: flex-start;
+    padding: 0;
     width: 100%;
     flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
   }
 
+  .review__field--checkbox {
+    padding: 0 auto;
+    margin: 0 auto;
+    width: 260px;
+  }
+
+ .review__field--checkbox label {
+    padding: 0;
+    padding-left: 80px;
+    width: 180px;
+  }
+
+  .review__field--park {
+    width: 240px;
+  }
+
+  .review__field--cliffs {
+    width: 210px;
+  }
+
+  .review__field--cliffs label {
+    padding-left: 75px;
+  }
 
   .review__section--feeling::after {
     top: 21px;
@@ -709,5 +762,15 @@
       left: 680px;
     }
   }
+
+  .review__textarea {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .review__section--required {
+    margin-bottom: 20px;
+  }
 }
+
 

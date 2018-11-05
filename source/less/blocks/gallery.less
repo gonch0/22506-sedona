@@ -1,58 +1,70 @@
 
 .gallery {
-  padding-top: 40px;
+  padding-top: 24px;
   padding-bottom: 20px;
 }
 
-
-.gallery__lead {
+.gallery__header {
   padding: 0;
   margin-right: 20px;
   margin-left: 20px;
 }
 
-
-.gallery__lead h2 {
-  padding: 0;
+.gallery__header br {
+  display: none;
 }
 
 
+.gallery__header h2 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.gallery__header p {
+  padding: 0 5px;
+  margin-bottom: 27px;
+}
 
 .gallery__list {
   list-style: none;
   padding: 0;
   margin: 0;
   border-top: 1px solid #e5e5e5;
-
 }
 
 
 .gallery__item {
   padding-left: 20px;
-  padding-bottom: 18px;
-  padding-top: 22px;
+  padding-bottom: 15px;
+  padding-top: 23px;
   border-bottom: 1px solid #e5e5e5;
   text-align: left;
 }
 
 .gallery__item h3 {
   margin: 0;
-  padding-bottom: 8px;
+  padding-top: 8px;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .gallery__item p {
+  font-size: 14px;
   margin-top: 0;
+  margin-bottom: 0;
   text-transform: none;
+  padding-bottom: 9px;
 }
 
 .gallery__item span {
   position: relative;
   padding-left: 36px;
-  padding-bottom: 2px;
   font-size: 14px;
   font-weight: bold;
 }
-
 
 .gallery__icon-like {
   position: absolute;
@@ -61,27 +73,32 @@
   opacity: 0.3;
 }
 
-
 .gallery__image {
   width: 280px;
-  min-height: 280px;
+  height: 280px;
 }
 
-
 @media (min-width: 768px) {
-
   .gallery {
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding-top: 75px;
   }
 
-  .gallery__lead h2 {
-    margin-bottom: 25px;
+  .gallery__header h2 {
+    width: 440px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    font-size: 30px;
+    line-height: 26px;
   }
 
-  .gallery__lead p {
-    padding: 0;
-    margin-bottom: 55px;
+  .gallery__header p {
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 67px;
+  }
+
+  .gallery__header br {
+    display: inline
   }
 
   .gallery__list {
@@ -106,23 +123,30 @@
   }
 
   .gallery__item h3 {
-    padding-top: 15px;
+    padding-top: 10px;
     padding-left: 20px;
   }
 
   .gallery__item p {
     padding-left: 19px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 
   .gallery__item span {
     position: absolute;
-
     text-align: left;
-    bottom: 30px;
-    right: 25px;
+    bottom: 28px;
+    right: 30px;
   }
 
+  .gallery__item--sunset span {
+    bottom: 25px;
+    right: 20px;
+  }
+
+  .gallery__item--road span {
+    right: 35px;
+  }
   .gallery__icon-like {
     position: absolute;
     top:1px;
@@ -132,31 +156,28 @@
 
   .gallery__image {
     width: 100%;
-    height: 267px;
+    height: 268px;
   }
 
   .gallery__image--sunset {
     height: 400px;
   }
-
 }
 
 @media (min-width: 1200px) {
-
   .gallery {
-    padding-top: 67px;
-    padding-bottom: 30px;
+    padding-top: 112px;
+    padding-bottom: 25px;
   }
 
-  .gallery__lead h2 {
-    margin-bottom: 25px;
+  .gallery__header h2 {
+    margin-bottom: 30px;
   }
 
-  .gallery__lead p {
+  .gallery__header p {
     padding: 0;
-    margin-bottom: 55px;
+    margin-bottom: 70px;
   }
-
 
   .gallery__list {
     width: 1200px;
@@ -168,49 +189,60 @@
     width: 33.3%;
     height: 268px;
     padding: 0;
+    margin: 0;
     background-color: #f2f2f2;
+    border: none;
     position: relative;
 
     &--sunset {
       width: 100%;
       height: 400px;
     }
-
   }
 
   .gallery__item h3 {
     position: absolute;
-    bottom: 28px;
-    left: 5px;
+    bottom: 41px;
+    left: 2px;
     color: #ffffff;
     z-index: 1;
   }
 
   .gallery__item p {
     position: absolute;
-    bottom: -12px;
-    left: 5px;
+    bottom: 4px;
+    left: 2px;
     color: #ffffff;
     z-index: 1;
   }
 
-
   .gallery__item span {
-    bottom: 18px;
-    right: 23px;
+    bottom: 28px;
+    right: 29px;
     color: #ffffff;
     z-index: 1;
+  }
+
+  .gallery__item  {
+    &--sunset span {
+      right: 22px;
+    }
+
+    &--road span {
+      right: 35px;
+    }
   }
 
   .gallery__icon-like {
-    fill: #ffffff;
+    /*fill: #ffffff;*/
+    background-color: red;
     z-index: 1;
   }
 
   .gallery__item::after {
     content: "";
     position: absolute;
-    bottom: -12px;
+    bottom: 0px;
     height: 80px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
