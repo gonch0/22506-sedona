@@ -5,50 +5,44 @@
   <title>HTML Academy: Седона Форма отзыва</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/picturefill.min.js"></script>
 </head>
 <body>
   <div class="container">
     <header class="page-header">
-      <nav class="page-header__main-nav main-nav">
+      <nav class="page-header__main-nav main-nav main-nav--closed main-nav--nojs">
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a href="index.html">Главная</a>
           </li>
-
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--photo">
             <a href="photo.html">Фото и видео</a>
           </li>
-
-          <li class="main-nav__item main-nav__item--center">
+          <li class="main-nav__item main-nav__item--form">
             <a>Форма отзыва</a>
           </li>
-
           <li class="main-nav__item">
             <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть меню</span></button>
-        <button class="main-nav__open" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <!--<button class="main-nav__open" type="button"><span class="visually-hidden">Открыть меню</span></button>-->
       </nav>
-
-      <a class="page-header__logo">
+      <a href="index.html" class="page-header__logo">
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-          <img src="img/logo-sedona-mobile.svg" width="102px" height="84px" alt="Седона логотип">
+          <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Седона логотип">
         </picture>
       </a>
     </header>
 
     <main class="page-main">
       <h1 class="visually-hidden">Седона: Отзывы</h1>
-
       <div class="intro intro--cut">
-        <img class="visually-hidden" src="img/text-sedona.svg" width="229px" height="39px" alt="Интро Седона текст">
+        <img class="visually-hidden" src="img/text-sedona.svg" width="229" height="39" alt="Интро Седона текст">
       </div>
-
       <section class="review">
-
         <header class="review__header">
           <h2>Оставьте свой отзыв</h2>
           <p>Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещённых вами достопримечательностях</p>
@@ -62,12 +56,10 @@
                 <label class="review__label" for="name">Имя*:</label>
                 <input class="review__input" type="text" id="name" name="name" placeholder="Петр">
               </div>
-
               <div class="review__field review__field--name">
                 <label class="review__label" for="lastname">Фамилия*:</label>
                 <input class="review__input" type="text" id="lastname" name="lastname" placeholder="Иванов">
               </div>
-
               <div class="review__field review__field--name">
                 <label class="review__label" for="middlename">Отчество:</label>
                 <input class="review__input" type="text" id="middlename" name="middlename" placeholder="Александрович">
@@ -76,16 +68,14 @@
 
             <section class="review__section review__section--contacts">
               <h3 class="review__title review__title--line">Контактная информация:</h3>
-
               <div class="review__field review__field--phone">
-                <label class="review__label review__label--phone" for="phone"><span>Контактный</span> телефон<sup>*</sup>:</label>
+                <label class="review__label review__label--phone" for="phone"><span>Контактный</span> телефон*:</label>
                 <div class="review__wrapper review__wrapper--phone">
                   <input class="review__input review__input--phone" type="tel" id="phone" name="phone" placeholder="Введите телефон">
                 </div>
               </div>
-
               <div class="review__field review__field--email">
-                <label class="review__label review__label--email" for="email">Электронная почта<sup>*</sup>:</label>
+                <label class="review__label review__label--email" for="email">Электронная почта*:</label>
                 <div class="review__wrapper review__wrapper--email">
                   <input class="review__input review__input--email" type="email" id="email" name="email" placeholder="Введите e-mail">
                 </div>
@@ -97,55 +87,43 @@
               <div class="review__field review__field--radio">
                 <input class="review__radio visually-hidden" type="radio" name="feeling" id="good" value="good" checked>
                 <label class="review__label review__label--radio" for="good">Скорее положительное</label>
-
               </div>
-
               <div class="review__field review__field--radio">
                 <input class="review__radio visually-hidden" type="radio" name="feeling" id="bad" value="bad">
                 <label class="review__label review__label--radio" for="bad">Скорее отрицательное</label>
-
               </div>
-
               <div class="review__field review__field--radio">
                 <input class="review__radio visually-hidden" type="radio" name="feeling" id="unsure" value="unsure">
                 <label class="review__label review__label--radio" for="unsure">Затрудняюсь ответить</label>
-
               </div>
             </section>
 
-
             <section class="review__section review__section--attractions">
               <h3 class="review__title review__title--line">Посещенные <br> достопримечательности:</h3>
-
               <div class="review__wrapper-checkbox">
                 <div class="review__field review__field--checkbox">
                   <input class="review__checkbox visually-hidden" type="checkbox" name="bridge" id="bridge" checked>
                   <label class="review__label review__label--checkbox" for="bridge">Мост Дьявола</label>
                 </div>
-
                 <div class="review__field review__field--checkbox">
                   <input class="review__checkbox visually-hidden" type="checkbox" name="bell" id="bell" checked>
                   <label class="review__label review__label--checkbox" for="bell">Гора-Колокол</label>
                 </div>
-
-                <div class="review__field review__field--checkbox">
+                <div class="review__field review__field--checkbox review__field--park">
                   <input class="review__checkbox visually-hidden" type="checkbox" name="park" id="park"checked>
                   <label class="review__label review__label--checkbox" for="park">Слайд-парк</label>
                 </div>
-
-                <div class="review__field review__field--checkbox">
+                <div class="review__field review__field--checkbox review__field--cliffs">
                   <input class="review__checkbox visually-hidden" type="checkbox" name="cliffs" id="cliffs">
                   <label class="review__label review__label--checkbox" for="cliffs">Красные скалы</label>
                 </div>
               </div>
             </section>
-
             <section class="review__section review__section--emotions">
               <h3 class="review__title review__title--line">Опишите свои эмоции:</h3>
               <label class="visually-hidden" for="emotions">Эмоции</label>
               <textarea class="review__textarea" type="text" name="emotions" id="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
             </section>
-
             <section class="review__section review__section--required">
               <button class="review__button button" type="submit">Отправить отзыв</button>
               <p>* — Обязательные поля</p>
@@ -153,20 +131,17 @@
           </div>
         </form>
       </section>
-
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__title">
         <b>#visitsedona</b>
       </div>
-
       <ul class="page-footer__social-list social-list">
         <li class="social-list__item">
           <a class="social-list__link social-list__link--twitter" href="#">
             <img src="img/icon-twitter.svg" width="20" height="16" alt="Твиттер логотип">
           </a>
-
         </li>
         <li class="social-list__item">
           <a class="social-list__link social-list__link--facebook" href="#">
@@ -179,7 +154,6 @@
           </a>
         </li>
       </ul>
-
       <div class="page-footer__copyright copyright">
         <b>Разработано</b>
         <a href="https://htmlacademy.ru/intensive/adaptive">
@@ -189,7 +163,6 @@
     </footer>
 
     <!--Формы-->
-
     <section class="review__modal review__modal--error">
       <h2>Что-то пошло не так!</h2>
       <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
@@ -205,5 +178,6 @@
     </section>
 
   </div>
+  <script src="js/main-nav.js"></script>
 </body>
 </html>

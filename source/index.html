@@ -5,50 +5,45 @@
   <title>HTML Academy: Седона Главная</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/picturefill.min.js"></script>
 </head>
 <body>
   <div class="container">
     <header class="page-header">
-      <nav class="page-header__main-nav main-nav">
+      <nav class="page-header__main-nav main-nav main-nav--closed main-nav--nojs">
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a>Главная</a>
           </li>
-
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--photo">
             <a href="photo.html">Фото и видео</a>
           </li>
-
-          <li class="main-nav__item main-nav__item--center">
+          <li class="main-nav__item main-nav__item--form">
             <a href="form.html">Форма отзыва</a>
           </li>
-
           <li class="main-nav__item">
             <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть меню</span></button>
-        <button class="main-nav__open" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <!--<button class="main-nav__open" type="button"><span class="visually-hidden">Открыть меню</span></button>-->
       </nav>
-
       <a class="page-header__logo">
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-          <img src="img/logo-sedona-mobile.svg" width="102px" height="84px" alt="Седона логотип">
+          <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Седона логотип">
         </picture>
       </a>
     </header>
 
     <main class="page-main">
       <h1 class="visually-hidden">Седона</h1>
-
       <div class="intro">
-        <img class="visually-hidden" src="img/text-sedona.svg" width="229px" height="39px" alt="Интро Седона текст">
+        <img class="visually-hidden" src="img/text-sedona.svg" width="229" height="39" alt="Интро Седона текст">
       </div>
-
       <section class="advantages">
-        <header class="advantages__lead lead">
+        <header class="advantages__header">
           <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         </header>
@@ -59,51 +54,42 @@
             <span>№1</span>
             <p>Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
-
-
           <picture class="advantages-banner__img">
-            <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg">
-            <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg">
-            <img src="img/main-city-mobile@1x.jpg"  height="256" alt="Городок">
+            <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+            <img src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" height="256" alt="Городок">
           </picture>
-
         </section>
-
-
         <!--Этаж 2-->
         <section class="advantages-list">
           <div class="advantages-list__item advantages-list--living">
             <h3>Жилье</h3>
-            <p>Рекомендуем пожить в настоящем отеле, все как в кино!</p>
+            <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </div>
 
           <div class="advantages-list__item advantages-list--souvenirs">
             <h3>Сувениры</h3>
-            <p>Не только китайского, но и местного производства!</p>
+            <p>Не только китайского,<br class="advantages__br"> но и местного производства!</p>
           </div>
 
           <div class="advantages-list__item advantages-list--food">
             <h3>Еда</h3>
-            <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            <p>Всегда заказывайте фирменный бургер,<br class="advantages__br"> вы не разочаруетесь!</p>
           </div>
         </section>
-
         <!--Этаж 3-->
         <section class="advantages-banner advantages-banner--bridge">
           <div class="advantages-banner__text">
-            <h3>Там есть мост дьявола</h3>
+            <h3>Там есть мост&nbsp;дьявола</h3>
             <span>№2</span>
             <p>Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           </div>
-
           <picture class="advantages-banner__img">
-            <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg">
-            <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg">
-            <img src="img/main-bridge-mobile@1x.jpg" height="256" alt="Мост">
+            <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+            <img src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" height="256" alt="Мост">
           </picture>
-
         </section>
-
         <!--Этаж 4-->
         <section class="advantages-text">
           <div class="advantages-text__item advantages-text__item--square">
@@ -111,13 +97,11 @@
             <span>№3</span>
             <p>Все интересные места находятся очень близко</p>
           </div>
-
           <div class="advantages-text__item advantages-text__item--road">
             <h3>Красивая дорога</h3>
             <span>№4</span>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно</p>
           </div>
-
           <div class="advantages-text__item advantages-text__item--tourists">
             <h3>Мало туристов</h3>
             <span>№5</span>
@@ -127,12 +111,17 @@
 
       <section class="hotels">
         <h2>Заинтересовались?</h2>
-        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <p>Укажите предполагаемые даты поездки,<br class="hotels__br">и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a class="hotels__button button" href="#">Найти гостиницу</a>
-      </section>
-
-      <section class="map">
-        <!--<img src="img/bg-map-mobile@1x.jpg" width="320px" height="350px" alt="Карта"> -->
+        <div class="hotels__map">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+            <img class="hotels__image" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg" alt="Карта">
+          </picture>
+          <img class="hotels__map-marker" src="img/icon-map-marker.svg" width="30" height="30" alt="Указатель карты">
+          <!--<iframe class="hotels__map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2825605.628943707!2d-111.97766740692803!3d34.72289426122266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1541267784978" width="320" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+        </div>
       </section>
     </main>
 
@@ -140,17 +129,15 @@
       <div class="page-footer__title">
         <b>#visitsedona</b>
       </div>
-
       <ul class="page-footer__social-list social-list">
         <li class="social-list__item">
           <a class="social-list__link social-list__link--twitter" href="#">
             <img src="img/icon-twitter.svg" width="20" height="16" alt="Твиттер логотип">
           </a>
-
         </li>
         <li class="social-list__item">
           <a class="social-list__link social-list__link--facebook" href="#">
-            <img src="img/icon-facebook.svg" width="12" height="20" alt="Фэйсбук логотип">
+            <img src="img/icon-facebook.svg" width="12" height="11" alt="Фэйсбук логотип">
           </a>
         </li>
         <li class="social-list__item">
@@ -159,7 +146,6 @@
           </a>
         </li>
       </ul>
-
       <div class="page-footer__copyright copyright">
         <b>Разработано</b>
         <a href="https://htmlacademy.ru/intensive/adaptive">
@@ -168,5 +154,6 @@
       </div>
     </footer>
   </div>
+  <script src="js/main-nav.js"></script>
 </body>
 </html>

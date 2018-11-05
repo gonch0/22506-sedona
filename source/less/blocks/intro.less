@@ -1,56 +1,80 @@
 .intro {
-  min-height: 389px;
-  background-color: #ffffff;
+  min-height: 387px;
+  background-color: #638db4;
   background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile@1x.jpg");
-  background-size: 104%, 91%, cover;
+  background-size: 102%, 89%, cover;
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position-x: center, center, center;
-  background-position-y: bottom, center, center;
+  background-position-y: bottom, center, top;
+  margin-top: -1px;
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile@2x.jpg");
+  }
 }
 
 .intro--cut {
   min-height: 158px;
   background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/text-sedona.svg"), url("../img/bg-back-mobile@1x.jpg");
-  background-size: 105%, 280px, 100%;
-  background-position-y: bottom, center, center;
+  background-size: 105%, 71%, cover;
+  background-position-y: bottom, 51px, bottom;
+  margin-top: -4px;
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/text-sedona.svg"), url("../img/bg-back-mobile@2x.jpg");
+  }
 }
-
 
 @media (min-width: 768px) {
   .intro {
     min-height: 520px;
     background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-tablet@1x.jpg");
-    background-size: 102%, 60%, 100%;
+    background-size: 100%, 60%, 100%;
     background-position-x: center, 156px, center;
     background-position-y: bottom, 79px, center;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-tablet@2x.jpg");
+    }
   }
 
   .intro--cut {
     min-height: 292px;
-    background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/text-sedona.svg"), url("../img/bg-back-mobile@1x.jpg");
-    background-size: 104%, 280px, 100%;
-    background-position-x: center, center, center;
-    background-position-y: bottom, center, center;
+    background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/text-sedona.svg"), url("../img/bg-back-tablet@1x.jpg");
+    background-size: 100%, 60%, cover;
+    background-position-x: center, 157px, center;
+    background-position-y: bottom, 100px, -225px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/text-sedona.svg"), url("../img/bg-back-tablet@2x.jpg");
+    }
   }
-
-
 }
 
 @media (min-width: 1200px) {
   .intro {
-    min-height: 520px;
+    min-height: 519px;
     background-color: #ffffff;
     background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-desktop@1x.jpg");
-    background-size: 100%, 36%, 100%;
+    background-size: 100%, 38%, cover;
     background-position-x: center, 370px, center;
-    background-position-y: bottom, 80px, center;
+    background-position-y: bottom, 79px, center;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-desktop@2x.jpg");
+    }
+
   }
 
   .intro--cut {
-    min-height: 301px;
+    min-height: 304px;
     background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/text-sedona.svg"), url("../img/bg-back-desktop@1x.jpg");
-    background-size: 100%, 280px, 100%;
-    background-position-x: center, center, center;
-    background-position-y: bottom, center, center;
+    background-size: 100%, 39%, cover;
+    background-position-x: center, 365px, center;
+    background-position-y: bottom, 105px, -215px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/text-sedona.svg"), url("../img/bg-back-desktop@2x.jpg");
+    }
+
+
   }
 }

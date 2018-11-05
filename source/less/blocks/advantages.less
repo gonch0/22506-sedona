@@ -1,28 +1,49 @@
 
+.advantages-list--souvenirs br,
+.advantages-list--food br {
+  display: none;
+}
+
+.advantages__header h2 {
+  margin-top: 37px;
+  margin-bottom: 28px;
+  padding: 0 25px;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.advantages__header p {
+  padding: 0 26px;
+  line-height: 26px;
+  margin-bottom: 7px;
+}
+
 .advantages-banner {
   margin: 0;
 }
 
-
 .advantages-banner__text {
-  color: white;
   background-color: #81b3d2;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
   padding-top: 40px;
-  padding-bottom: 40px;
 }
-
 
 .advantages-banner__text h3 {
   margin: 0;
+  padding-top: 0;
+  padding-bottom: 8px;
   font-size: 18px;
   font-weight: bold;
   line-height: 26px;
-  padding-bottom: 20px;
 }
 
 .advantages-banner__text p {
   margin: 0;
-  padding-top: 20px;
+  padding: 0 20px;
+  padding-top: 11px;
+  padding-bottom: 36px;
 }
 
 .advantages-banner__text span::before,
@@ -33,13 +54,11 @@
   margin: 0 5px;
   width: 9px;
   height: 1px;
-  background-color: white;
+  background-color: #ffffff;
 }
 
-
 .advantages-banner__text--index {
-  padding-top: 80px;
-  color: white;
+  padding-top: 75px;
   background-image: url("../img/bg-triangle.svg");
   background-repeat: no-repeat;
   background-size: 101%;
@@ -50,24 +69,29 @@
   display: block;
 }
 
-/*Этаж 2*/
 .advantages-list {
   text-align: left;
   padding-right: 40px;
   padding-left: 70px;
   padding-top: 35px;
-  padding-bottom: 5px;
+  margin-bottom: 9px;
 }
 
 .advantages-list__item {
   position: relative;
-  padding-bottom: 28px;
+  padding-bottom: 14px;
 
 }
 
-.advantages-list__item h2 {
-  text-align: left;
+.advantages-list__item h3 {
   margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.advantages-list__item p {
+  line-height: 21px;
 }
 
 .advantages-list--living::before {
@@ -85,7 +109,7 @@
 .advantages-list--souvenirs::before {
   content: "";
   position: absolute;
-  left: -47px;
+  left: -48px;
   top: -10px;
   width: 36px;
   height: 38px;
@@ -97,8 +121,8 @@
 .advantages-list--food::before {
   content: "";
   position: absolute;
-  left: -47px;
-  top: -10px;
+  left: -50px;
+  top: -5px;
   width: 36px;
   height: 38px;
   background-size: 36px 38px;
@@ -106,29 +130,28 @@
   background-repeat: no-repeat;
 }
 
-
-/*Этаж 3*/
-
 .advantages-text {
   background-color: #eeeeee;
   padding-top: 0;
   padding-bottom: 0;
-
 }
 
 .advantages-text__item {
   display: block;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 14px;
+  padding-right: 19px;
+  padding-left: 19px;
   margin-right: 15px;
+  margin-left: 15px;
   color: #333333;
-  background-color: #eeeeee;
-  border-bottom: 1px solid #d6d6d6;
+  border-bottom: 1px solid #eeeeee;
 }
 
+.advantages-text__item h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
 
 .advantages-text__item span::before,
 .advantages-text__item span::after {
@@ -141,10 +164,36 @@
   background-color: #979797;
 }
 
+.advantages-text__item p {
+  line-height: 21px;
+}
+
+
 
 @media (min-width: 768px) {
 
-/*Этаж 1*/
+  .advantages-list--souvenirs br,
+  .advantages-list--food br {
+    display: inline;
+  }
+
+
+  .advantages__header {
+    margin-top: 48px;
+  }
+  .advantages__header h2 {
+    width: 460px;
+    margin: 0 auto;
+    margin-bottom: 29px;
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  .advantages__header p {
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+  }
 
   .advantages-banner {
     display: flex;
@@ -157,32 +206,33 @@
   }
 
   .advantages-banner h3 {
+    font-size: 21px;
+    line-height: 26px;
     padding-top: 46px;
-    padding-bottom: 12px;
+    padding-bottom: 8px;
     padding-left: 50px;
     padding-right: 50px;
   }
 
   .advantages-banner p {
+    padding-top: 20px;
     padding-left: 45px;
     padding-right: 45px;
-    padding-bottom: 10px
+    padding-bottom: 10px;
+    line-height: 21px;
 }
 
-
   .advantages-banner__text--index {
-
     background-image: none;
   }
-/*Этаж 2*/
+
   .advantages-list {
     display: flex;
     justify-content: space-between;
-    padding-top: 140px;
-    padding-bottom: 65px;
+    padding-top: 160px;
+    padding-bottom: 39px;
     padding-right: 47px;
     padding-left: 47px;
-
   }
 
   .advantages-list__item {
@@ -194,6 +244,7 @@
   .advantages-list__item h3 {
     text-align: center;
     font-size: 21px;
+    padding-bottom: 7px;
   }
 
   .advantages-list__item p {
@@ -203,7 +254,7 @@
   .advantages-list--living {
     order: 0;
     &::before {
-      top: -80px;
+      top: -100px;
       left: 50%;
       width: 75px;
       height: 72px;
@@ -213,9 +264,10 @@
   }
 
   .advantages-list--food {
+    margin: 0 100px;
     order: 1;
     &::before {
-      top: -80px;
+      top: -100px;
       left: 50%;
       width: 75px;
       height: 72px;
@@ -226,23 +278,22 @@
 
   .advantages-list--souvenirs {
     order: 2;
+    & p {
+      margin-left: -9px;
+    }
     &::before {
-      top: -80px;
+      top: -100px;
       left: 50%;
-      width: 75px;
+      width: 60px;
       height: 72px;
-      background-size: 75px 72px;
+      background-size: 60px 72px;
       transform: translateX(-50%);
     }
   }
 
-
-/*Этаж 3*/
   .advantages-banner--bridge {
     flex-direction: row-reverse;
   }
-
-/*Этаж 4*/
 
   .advantages-text {
     display: flex;
@@ -253,22 +304,21 @@
 
  .advantages-text__item h3 {
     margin: 0;
+    margin-bottom: 10px;
     font-size: 21px;
     line-height: 26px;
     padding-left: 53px;
     padding-right: 53px;
-    margin-bottom: 20px;
+
   }
 
   .advantages-text__item p {
     font-size: 14px;
     line-height: 21px;
-    margin-top: 30px;
+    margin-top: 20px;
     padding-left: 40px;
     padding-right: 40px;
-
   }
-
 
   .advantages-text__item {
     width: 33.3%;
@@ -277,17 +327,16 @@
     padding-left: 0;
     padding-right: 0;
     padding-top: 42px;
-    padding-bottom: 42px;
+    padding-bottom: 30px;
     border-bottom: none;
 
     &--square h3 {
-      margin-bottom: 20px;
       padding-left: 23px;
       padding-right: 20px;
     }
 
     &--square p {
-      margin-top: 30px;
+      margin-top: 20px;
       margin-left: -17px;
       padding-left: 65px;
       padding-right: 49px;
@@ -296,7 +345,6 @@
 
     &--road h3 {
       margin-left: -3px;
-      margin-bottom: 20px;
       padding-left: 54px;
       padding-right: 51px;
     }
@@ -309,7 +357,6 @@
 
     &--tourists h3 {
       margin-left: 5px;
-      margin-bottom: 20px;
       padding-left: 52px;
       padding-right: 60px;
     }
@@ -319,14 +366,11 @@
       padding-right: 42px;
     }
 
-
   }
 
 }
 
 @media (min-width: 1200px) {
-
-/*Этаж 1*/
 
   .advantages-banner__text {
     width: 400px;
@@ -338,15 +382,17 @@
     width: 800px;
   }
 
+  .advantages-list {
+    margin-bottom: 30px;
+  }
 
-/*Этаж 2*/
   .advantages-list__item {
     width: 260px;
   }
 
   .advantages-banner h3 {
     width: 150px;
-    padding-top: 50px;
+    padding-top: 52px;
     padding-left: 124px;
     padding-right: 124px;
   }
@@ -359,6 +405,15 @@
   .advantages-banner--bridge p {
     padding-left: 85px;
     padding-right: 85px;
+  }
+  .advantages-list__item {
+    width: 33.3%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .advantages-list--food {
+    margin: 0 100px;
   }
 
 
@@ -382,10 +437,8 @@
       padding-right: 130px;
     }
 
-
     &--road p {
-      padding-left: 36px;
-      padding-right: 36px;
+      padding: 0 65px;
     }
 
     &--tourists h3 {
