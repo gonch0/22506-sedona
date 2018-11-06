@@ -18,7 +18,8 @@
     "gulp-svgstore": "^7.0.0",
     "posthtml-include": "^1.2.0",
     "stylelint": "9.6.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "0.1.x",
+    "del": "^3.0.0"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
