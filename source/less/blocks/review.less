@@ -60,7 +60,6 @@
     border: none;
     margin-bottom: 41px;
   }
-
 }
 
 .review__field {
@@ -114,7 +113,7 @@
 }
 
 .review__input {
-  padding: 0px 7px;
+  padding: 0 7px;
   padding-left: 20px;
   min-width: 150px;
   min-height: 50px;
@@ -139,6 +138,7 @@
 
 .review__input::placeholder {
   color: #000000;
+  opacity: 1;
   font-size: 16px;
 }
 
@@ -160,7 +160,6 @@
     padding-bottom: 8px;
   }
 }
-
 
 .review__label--radio,
 .review__label--checkbox {
@@ -187,13 +186,6 @@
   background-color: #f2f2f2;
 }
 
-/*
-.review__field--radio:hover .review__label--radio::before,
-.review__field--radio:focus + .review__label--radio::before {
-  background-color: #e5e5e5;
-}
-*/
-
 
 .review__radio:checked + .review__label--radio::after {
   position: absolute;
@@ -204,8 +196,26 @@
   height: 23px;
   border-radius: 50%;
   background: #333333;
+  z-index: 0;
 }
 
+.review__field--radio:hover .review__label--radio::before {
+  background-color: #e5e5e5;
+}
+
+.review__radio:active + .review__label--radio::before,
+.review__field--radio:focus .review__label--radio::before {
+  background-color: #d5d5d5;
+}
+
+.review__radio:active + .review__label--radio::after {
+  opacity: 0.3;
+}
+
+.review__checkbox:active + .review__label--checkbox::before {
+  opacity: 0.3;
+  background: #d5d5d5;
+}
 
 .review__label--checkbox::before {
   position: absolute;
@@ -216,23 +226,22 @@
   height: 53px;
   border-radius: 5px;
   background-color: #f2f2f2;
-
 }
 
-
-/*
-.review__checkbox:focus + .review__label--checkbox::before,
-.review__label--checkbox:hover::before {
-  background-color: #d5d5d5;
+.review__checkbox:focus + .review__label--checkbox::before {
+  background-color: #e5e5e5;
 }
-*/
 
 .review__checkbox:checked + .review__label--checkbox::before {
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #f2f2f2;
 }
 
+.review__label--checkbox:hover::before {
+  background-color: #e5e5e5;
+}
 
 .review__textarea {
   margin: 0;
@@ -249,6 +258,8 @@
 
   &::placeholder {
     color: black;
+    opacity: 1;
+    font-family: "PT Sans", "Arial", sans-serif;
   }
 }
 
@@ -285,7 +296,7 @@
   min-height: 280px;
 }
 
-.review__modal--error h2  {
+.review__modal--error h2 {
   margin-top: 35px;
   margin-bottom: 30px;
 }
@@ -293,14 +304,14 @@
 .review__modal--error p {
   margin-left: 56px;
   margin-right: 56px;
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 30px;
 }
 
 .review__modal--error button {
   width: 180px;
   margin-bottom: 35px;
-  padding: 15px 0px;
+  padding: 15px 0;
 }
 
 .review__modal--ok {
@@ -310,7 +321,6 @@
 .review__modal--ok h2 {
   margin-top: 35px;
   margin-bottom: 25px;
-
 }
 
 .review__modal--ok p {
@@ -334,7 +344,6 @@
 
 
 @media (min-width: 768px) {
-
   .review {
     padding: 0;
     margin: 0 auto;
@@ -364,10 +373,31 @@
   }
 
 
+  .review__section--feeling::after {
+    position: absolute;
+    content: "";
+    top: 25px;
+    right: 56px;
+    width: 1px;
+    height: 292px;
+    background-color: #dbdbdb;
+  }
+
+  .review__section h3 {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    font-size: 21px;
+    line-height: 26px;
+  }
+
   .review__section {
     position: relative;
     padding: 0;
     border: none;
+    font-size: 21px;
+    line-height: 26px;
 
     &--feeling {
       order: 0;
@@ -399,32 +429,29 @@
       margin-bottom: 45px;
     }
 
-    &--required {
+    &--feeling h3 {
+      text-align: left;
+      margin-bottom: 55px;
+    }
 
-      order: 5;
-      width: 100%;
+    &--name h3 {
+      text-align: left;
+      margin-bottom: 60px;
+    }
+
+    &--contacts h3 {
+      margin-bottom: 26px;
+    }
+
+    &--attractions h3 {
+      margin-bottom: 40px;
+    }
+
+    &--emotions h3 {
+      margin-bottom: 55px;
     }
   }
 
-  .review__section--feeling::after {
-    position: absolute;
-    content: "";
-    top: 25px;
-    right: 56px;
-    width: 1px;
-    height: 292px;
-    background-color: #dbdbdb;
-  }
-
-
-  .review__section h3 {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    padding: 0;
-    font-size: 21px;
-    line-height: 26px;
-  }
 
   .review__title--line {
     &::before,
@@ -443,35 +470,6 @@
     &::after {
       left: 525px;
     }
-}
-
-
-  .review__section {
-    font-size: 21px;
-    line-height: 26px;
-
-    &--feeling h3 {
-      text-align: left;
-      margin-bottom: 55px;
-    }
-
-    &--name h3 {
-      text-align: left;
-      margin-bottom: 60px;
-    }
-
-    &--contacts h3 {
-      margin-bottom: 26px;
-    }
-
-    &--attractions h3 {
-      margin-bottom: 40px;
-
-    }
-
-    &--emotions h3 {
-      margin-bottom: 55px;
-    }
   }
 
 
@@ -479,33 +477,8 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-  }
-
-  .review__section--name .review__input {
     padding: 0;
-    padding-left: 20px;
-   /* &::placeholder {
-      color: red;
-      padding-left: 20px;
-    }*/
-  }
 
-  .review__field--name  {
-    flex-wrap: nowrap;
-  }
-
-  .review__wrapper-checkbox {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: 95px;
-    width: 520px;
-  }
-
-
-
-  .review__field {
-    padding: 0;
     &--phone {
       margin-bottom: 21px;
     }
@@ -524,32 +497,45 @@
     }
   }
 
+  .review__section--name .review__input {
+    padding: 0;
+    padding-left: 20px;
+  }
+
+  .review__field--name {
+    flex-wrap: nowrap;
+  }
+
+  .review__wrapper-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 95px;
+    width: 520px;
+  }
+
   .review__textarea {
     width: 608px;
     margin-left: 0;
     margin-bottom: 20px;
-
     padding-left: 20px;
-
-   /* &::placeholder {
-      padding-left: 20px;
-    }*/
-
   }
 
-
   .review__section--required {
+    order: 5;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 80px;
 
-    & .review__button {
-    width: 50%;
-    padding: 0px;
-    height: 54px;
-    font-size: 19px;
+    &.review__button {
+      width: 50%;
+      padding: 0;
+      height: 54px;
+      font-size: 19px;
     }
   }
+
   .review__section--required p {
     display: block;
     width: 50%;
@@ -573,7 +559,6 @@
     /*display: block;*/
     width: 400px;
   }
-
 
   .review__modal--error h2 {
     padding-top: 30px;
@@ -612,9 +597,7 @@
   .review__modal-wrapper {
     margin: 0;
     padding: 45px 0;
-
   }
-
 }
 
 @media (min-width: 1200px) {
@@ -636,33 +619,30 @@
     margin-bottom: 37px;
   }
 
-
   .review__section {
-
     &--name {
       margin-left: -5px;
     }
 
     &--required {
       padding-bottom: 67px;
+      margin-bottom: 20px;
     }
 
     &--contacts {
       margin-bottom: 5px;
       padding-top: 27px;
-
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 18px;
     }
 
     &--attractions {
-      padding-top: 0px;
+      padding-top: 0;
       margin-top: 0;
       margin-bottom: 30px;
     }
 
-  }
-
-
-  .review__section {
     &--feeling h3 {
       padding-left: 80px;
       margin-bottom: 58px;
@@ -674,16 +654,9 @@
     }
 
     &--contacts h3 {
-      margin-top: 0px;
+      margin-top: 0;
       margin-bottom: 75px;
     }
-
-  }
-
-  .review__section--contacts {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 18px;
   }
 
   .review__section--contacts .review__field {
@@ -703,7 +676,6 @@
   .review__label--phone span {
     display: none;
   }
-
 
   .review__wrapper--phone,
   .review__wrapper--email {
@@ -730,10 +702,12 @@
     width: 260px;
   }
 
- .review__field--checkbox label {
-    padding: 0;
-    padding-left: 80px;
-    width: 180px;
+  .review__field {
+    &--checkbox label {
+      padding: 0;
+      padding-left: 80px;
+      width: 180px;
+    }
   }
 
   .review__field--park {
@@ -758,6 +732,7 @@
     &::after {
       width: 280px;
     }
+
     &::after {
       left: 680px;
     }
@@ -767,10 +742,4 @@
     width: 100%;
     margin-bottom: 18px;
   }
-
-  .review__section--required {
-    margin-bottom: 20px;
-  }
 }
-
-

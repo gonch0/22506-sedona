@@ -1,4 +1,3 @@
-
 .social-list {
   display: flex;
   justify-content: center;
@@ -19,12 +18,27 @@
   align-items: center;
   width: 46px;
   height: 48px;
-
   margin-left: -12px;
   vertical-align: middle;
   background-color: #81b3d2;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:focus {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
 }
 
-.social-list__link img {
-  filter: invert(100%);
+.social-list__link svg {
+  fill: #ffffff;
 }
