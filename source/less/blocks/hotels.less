@@ -33,29 +33,22 @@
 }
 
 .hotels__map {
-  position: relative;
-  margin-top: 50px;
-}
-
-.hotels__image {
   width: 100%;
-}
+  height: 350px;
+  margin-top: 49px;
+  background-color: #ecece1;
+  background-image: url("../img/bg-map-mobile@1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 
-.hotels__map-marker {
-  position: absolute;
-  bottom: 165px;
-  left: 140px;
-}
-
-.hotels__map-google {
-  position: absolute;
-  top: 0;
-  left: 0;
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+  }
 }
 
 @media (min-width: 768px) {
   .hotels {
-    padding-bottom: 13px;
+    padding-bottom: 0;
   }
 
   .hotels__br {
@@ -77,17 +70,16 @@
     width: 458px;
     padding: 16px 0;
     margin: 0 auto;
-    margin-bottom: 59px;
   }
 
-  .hotels__map-marker {
-    top: 170px;
-    left: 370px;
-  }
+  .hotels__map {
+    margin-top: 60px;
+    margin-bottom: 12px;
+    background-image: url("../img/bg-map-tablet@1x.jpg");
 
-  .hotels__map-google {
-    width: 100%;
-    height: 351px;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+    }
   }
 }
 
@@ -97,7 +89,7 @@
   }
 
   .hotels h2 {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 
   .hotels p {
@@ -106,15 +98,15 @@
 
   .hotels .hotels__button {
     padding-bottom: 16px;
-    margin-bottom: 69px;
+    margin-bottom: 6px;
   }
 
   .hotels__map {
-    margin-bottom: 10px;
-  }
+    margin-bottom: 8px;
+    background-image: url("../img/bg-map-desktop@1x.jpg");
 
-  .hotels__map-marker {
-    top: 170px;
-    left: 585px;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+    }
   }
 }

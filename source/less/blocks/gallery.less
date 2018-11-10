@@ -187,13 +187,13 @@
   }
 
   .gallery__item {
+    position: relative;
     width: 33.3%;
     height: 268px;
     padding: 0;
     margin: 0;
     background-color: #f2f2f2;
     border: none;
-    position: relative;
 
     &--sunset {
       width: 100%;
@@ -219,16 +219,16 @@
 
   .gallery__item span {
     bottom: 28px;
-    right: 29px;
+    right: 25px;
     color: #ffffff;
     z-index: 1;
   }
 
   .gallery__item--sunset span {
-    right: 22px;
+    right: 20px;
   }
 
-  .gallery__item--sunset--road span {
+  .gallery__item--road span {
     right: 35px;
   }
 
@@ -238,9 +238,9 @@
     fill: #ffffff;
   }
 
-  .gallery__item::after {
-    content: "";
+  .gallery__item::before {
     position: absolute;
+    content: "";
     bottom: 0;
     height: 80px;
     width: 100%;
