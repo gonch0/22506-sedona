@@ -215,8 +215,8 @@
 .review__label--checkbox::before {
   position: absolute;
   content: "";
-  left: 0;
-  top: 0;
+  left: -2px;
+  top: 4px;
   width: 53px;
   height: 53px;
   border-radius: 5px;
@@ -227,8 +227,8 @@
 .review__checkbox:checked + .review__label--checkbox::after {
   position: absolute;
   content: "";
-  left: 16px;
-  top: 18px;
+  left: 15px;
+  top: 21px;
   width: 23px;
   height: 16px;
   background-image: url("../img/icon-tick.svg");
@@ -590,9 +590,14 @@
   .review__field {
     &--checkbox label {
       padding: 0;
-      padding-left: 80px;
+      padding-left: 78px;
     }
   }
+
+  .review__field--bridge label {
+    padding-left: 75px;
+  }
+
 
   .review__field--park {
     width: 240px;
@@ -603,7 +608,7 @@
   }
 
   .review__field--cliffs label {
-    padding-left: 75px;
+    padding-left: 78px;
   }
 
   .review__section--feeling::after {
