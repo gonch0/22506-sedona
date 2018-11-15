@@ -3,11 +3,20 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона Форма отзыва</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script src="js/picturefill.min.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+  <script>
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
 <body>
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <div class="container">
     <header class="page-header">
       <nav class="page-header__main-nav main-nav main-nav--closed main-nav--nojs">
@@ -18,15 +27,14 @@
           <li class="main-nav__item main-nav__item--photo">
             <a href="photo.html">Фото и видео</a>
           </li>
-          <li class="main-nav__item main-nav__item--form">
+          <li class="main-nav__item main-nav__item--form main-nav__item--active">
             <a>Форма отзыва</a>
           </li>
           <li class="main-nav__item">
             <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть меню</span></button>
-        <!--<button class="main-nav__open" type="button"><span class="visually-hidden">Открыть меню</span></button>-->
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Меню</span></button>
       </nav>
       <a href="index.html" class="page-header__logo">
         <picture>
@@ -40,7 +48,7 @@
     <main class="page-main">
       <h1 class="visually-hidden">Седона: Отзывы</h1>
       <div class="intro intro--cut">
-        <img class="visually-hidden" src="img/text-sedona.svg" width="229" height="39" alt="Интро Седона текст">
+        <h2 class="visually-hidden">Sedona</h2>
       </div>
       <section class="review">
         <header class="review__header">
@@ -101,7 +109,7 @@
             <section class="review__section review__section--attractions">
               <h3 class="review__title review__title--line">Посещенные <br> достопримечательности:</h3>
               <div class="review__wrapper-checkbox">
-                <div class="review__field review__field--checkbox">
+                <div class="review__field review__field--checkbox review__field--bridge">
                   <input class="review__checkbox visually-hidden" type="checkbox" name="bridge" id="bridge" checked>
                   <label class="review__label review__label--checkbox" for="bridge">Мост Дьявола</label>
                 </div>
@@ -110,7 +118,7 @@
                   <label class="review__label review__label--checkbox" for="bell">Гора-Колокол</label>
                 </div>
                 <div class="review__field review__field--checkbox review__field--park">
-                  <input class="review__checkbox visually-hidden" type="checkbox" name="park" id="park"checked>
+                  <input class="review__checkbox visually-hidden" type="checkbox" name="park" id="park" checked>
                   <label class="review__label review__label--checkbox" for="park">Слайд-парк</label>
                 </div>
                 <div class="review__field review__field--checkbox review__field--cliffs">
@@ -122,9 +130,10 @@
             <section class="review__section review__section--emotions">
               <h3 class="review__title review__title--line">Опишите свои эмоции:</h3>
               <label class="visually-hidden" for="emotions">Эмоции</label>
-              <textarea class="review__textarea" type="text" name="emotions" id="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
+              <textarea class="review__textarea" name="emotions" id="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
             </section>
             <section class="review__section review__section--required">
+              <h2 class="visually-hidden">Обязательные поля</h2>
               <button class="review__button button" type="submit">Отправить отзыв</button>
               <p>* — Обязательные поля</p>
             </section>
@@ -140,40 +149,44 @@
       <ul class="page-footer__social-list social-list">
         <li class="social-list__item">
           <a class="social-list__link social-list__link--twitter" href="#">
-            <img src="img/icon-twitter.svg" width="20" height="16" alt="Твиттер логотип">
+            <span class="visually-hidden">Твиттер</span>
+            <svg width="17.5" height="14.663"><use xlink:href="#icon-twitter"></use></svg>
           </a>
         </li>
         <li class="social-list__item">
           <a class="social-list__link social-list__link--facebook" href="#">
-            <img src="img/icon-facebook.svg" width="12" height="20" alt="Фэйсбук логотип">
+            <span class="visually-hidden">Фэйсбук</span>
+            <svg width="8.672" height="18.944"><use xlink:href="#icon-facebook"></use></svg>
           </a>
         </li>
         <li class="social-list__item">
           <a class="social-list__link social-list__link--youtube" href="#">
-            <img src="img/icon-youtube.svg" width="20" height="16" alt="Ютуб логотип">
+            <span class="visually-hidden">Ютуб</span>
+            <svg width="19.979" height="14.015"><use xlink:href="#icon-youtube"></use></svg>
           </a>
         </li>
       </ul>
       <div class="page-footer__copyright copyright">
         <b>Разработано</b>
         <a href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="img/logo-htmlacademy.svg" width="29" height="35" alt="Академия логотип">
+          <span class="visually-hidden">Академия</span>
+          <svg width="26.943" height="34.09"><use xlink:href="#icon-logo-htmlacademy"></use></svg>
         </a>
       </div>
     </footer>
 
     <!--Формы-->
-    <section class="review__modal review__modal--error">
+    <section class="modal modal--error">
       <h2>Что-то пошло не так!</h2>
       <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="review__modal-button button">Ок</button>
+      <button class="modal-button button" type="button">Ок</button>
     </section>
 
-    <section class="review__modal review__modal--ok">
+    <section class="modal modal--ok">
       <h2>Ваш отзыв отправлен</h2>
       <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам. <br> В ближайшее время мы опубликуем его на сайте.</p>
-      <div class="review__modal-wrapper">
-        <button class="review__modal-button button">Закрыть окно</button>
+      <div class="modal-wrapper">
+        <button class="modal-button button" type="button">Закрыть окно</button>
       </div>
     </section>
 

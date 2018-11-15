@@ -8,12 +8,12 @@
   margin-bottom: 25px;
 }
 
-.video__header  h2 {
+.video__header h2 {
   font-size: 18px;
   line-height: 26px;
 }
 
-.video__header  p {
+.video__header p {
   padding: 10px 22px;
 }
 
@@ -45,8 +45,9 @@
   background-color: rgba(214, 214, 214, 0.2);
 }
 
-.video__button--timeline {
+.video__indicator {
   position: absolute;
+  cursor: pointer;
   padding: 0;
   top: -3px;
   left: 36px;
@@ -59,18 +60,18 @@
 
 .video__button {
   width: 61px;
+  cursor: pointer;
   height: 40px;
   padding: 0;
   background-color: inherit;
   border: none;
   margin-top: 15px;
+  fill: #5c6870;
 
   &--cc {
     margin-left: auto;
   }
 
-}
-/*
   &:hover {
     fill: #333333;
   }
@@ -78,13 +79,11 @@
   &:active {
     fill: #b8b8b8;
   }
-*/
-
-
+}
 
 @media (min-width: 768px) {
   .video {
-    padding-bottom: 60px;
+    padding-bottom: 58px;
     margin: 0;
   }
 
@@ -109,16 +108,14 @@
   .video__controls {
     position: absolute;
     align-items: center;
-
     left: 40px;
     right: 40px;
-    bottom: 0px;
-
+    bottom: 0;
     background-color: rgba(0, 0, 0, 0.6);
     width: auto;
     height: 93px;
     padding: 0;
-
+    z-index: 0;
   }
 
   .video__timeline-wrapper {
@@ -126,16 +123,15 @@
     background-color: transparent;
   }
 
-
   .video__button {
     margin: 0;
     padding: 0;
     background-color: transparent;
-    /*После вставки SVG-иконок удалить */
-    background-color: blue;
+    fill: #ffffff;
 
     &--repeat {
       margin-left: 20px;
+      z-index: 10;
     }
 
     &--timeline {
@@ -145,30 +141,26 @@
     &--cc {
       margin-right: 15px;
     }
+
     &--fullscreen {
       margin-right: 30px;
     }
-
   }
 
-/*
-  .video__button {
+  .video__button:hover {
+    fill: #c2c2c2;
+  }
 
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }    */
+  .video__button:active {
+    fill: #949494;
+  }
 }
 
 @media (min-width: 1200px) {
-
   .video {
-    margin-bottom: 45px;
+    margin-bottom: 47px;
   }
+
   .video__header p {
     padding: 0 385px;
     margin-bottom: 70px;
